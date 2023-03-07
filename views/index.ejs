@@ -1,0 +1,54 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ATN Corporation toy shop</title>
+        <link rel="stylesheet" href="css/css.css">
+    </head>
+
+    <body>
+        <h1><strong>ATN Corporation.</strong></h1>
+
+
+
+        <!-- (2) READ Task -->
+        <div style="width: 100%">                     
+        <h2> Welcome to magical world of toys </h2>
+
+        <div class="container">
+            <div class="center">
+                <a class="button-21" href="insert" role="button">Add New</a>
+            </div>
+        </div>  
+        
+        <div>
+            <form action="/search" method="POST" style="margin-bottom: 0;">   
+                <input type="text" placeholder="Name of a Toy" name="name" style="padding: 10px 5px;"/>        
+                <button class="button-21" type="submit">Search</button>
+            </form>
+        </div>  
+
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Names</th>
+                    <th>Price</th>
+                    <th>quantity</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through quotes -->
+                <% for(var i = 0; i < products.length; i++) {%>
+                <tr>
+                    <td><%= products[i].name %></td>
+                    <td><%= products[i].price %></td>
+                    <td><%= products[i].quantity %></td>
+                    <td><%= products[i].date %></td>
+                </tr>
+                <% } %>
+            </div>
+    </body>
+
+</html>

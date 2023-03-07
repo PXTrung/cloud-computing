@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ATN Corporation toy shop</title>
+        <link rel="stylesheet" href="css/css.css">
+    </head>
+
+    <body>                      
+        <h1><strong>ATN Corporation.</strong></h1>
+
+        <div class="container">
+            <div class="center">
+                <a class="button-21" href="return" role="button">Return</a>
+            </div>
+        </div>
+
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Names</th>
+                    <th>Price</th>
+                    <th>quantity</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through quotes -->
+                <% for(var i = 0; i < products.length; i++) {%>
+                <tr>
+                    <td><%= products[i].name %></td>
+                    <td><%= products[i].price %></td>
+                    <td><%= products[i].quantity %></td>
+                    <td><%= products[i].date %></td>
+                </tr>
+                <% } %>
+            </div>
+    </body>
+</html>
